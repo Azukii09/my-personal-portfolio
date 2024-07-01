@@ -1,8 +1,8 @@
 const navbar = [
     {
         id:1,
-        name:"Hero",
-        link:"/hero"
+        name:"Home",
+        link:"/home"
     },
     {
         id:2,
@@ -11,12 +11,22 @@ const navbar = [
     },
     {
         id:3,
-        name:"Projects",
-        link:"/projects"
+        name:"Portfolio",
+        link:"/portfolio"
     },
     {
         id:4,
-        name:"Contact Us",
+        name:"Service",
+        link:"/service"
+    },
+    {
+        id:5,
+        name:"News",
+        link:"/news"
+    },
+    {
+        id:6,
+        name:"Contact",
         link:"/contact"
     },
 ]

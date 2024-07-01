@@ -27,6 +27,7 @@ const config: Config = {
       // warning: "#FACD2B",
       // success: "#26FF2A",
       // danger: "#FF213F",
+      white: "#FFFFFF",
     }
   },
   plugins: [],

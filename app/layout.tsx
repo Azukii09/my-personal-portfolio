@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/feature/navbar";
 import Footer from "@/components/feature/footer";
 import React from "react";
+import Image from "next/image";
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -19,11 +20,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={syne.className}>
-        <Navbar/>
+    <body className={syne.className}>
+    <Navbar/>
+      <div className="fixed px-6 sm:px-8 md:px-16 lg:px-20 top-20 w-full h-full">
+        <div className={"top-20 w-full h-full bg-contras rounded flex justify-between"}>
+          <div className={"h-full bg-white w-2/5 relative"}>
+            <Image src={"/assets/img/man.png"} alt={""} className={"object-cover"} fill />
+          </div>
+          <div className={"w-3/5 px-12 pt-24 overflow-y-scroll"}>
             {children}
-        <Footer/>
-      </body>
+          </div>
+        </div>
+      </div>
+    <Footer/>
+    </body>
     </html>
   );
 }
