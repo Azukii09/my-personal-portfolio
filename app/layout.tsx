@@ -3,6 +3,7 @@ import { Syne } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/feature/navbar";
 import Footer from "@/components/feature/footer";
+import React from "react";
 
 const syne = Syne({ subsets: ["latin"] });
 
