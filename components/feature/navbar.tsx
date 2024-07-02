@@ -11,7 +11,9 @@ export default function Navbar() {
     return(
         <nav className="fixed px-6 sm:px-8 md:px-16 lg:px-20 w-full">
             <div className={"top-0 flex justify-between h-20"}>
-                <div className={"flex items-center tracking-wider text-xl md:text-2xl lg:text-3xl uppercase font-bold text-primary"}>Alvillage Z.</div>
+                <div className={"flex items-center tracking-wider text-xl md:text-2xl lg:text-3xl uppercase font-bold text-primary"}>
+                    A.Z.
+                </div>
                 <div className={"flex items-center"}>
                     <div className="">
                         <ul className="hidden md:flex items-center justify-between">
