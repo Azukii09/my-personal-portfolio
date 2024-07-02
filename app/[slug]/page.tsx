@@ -2,7 +2,7 @@ export default function SinglePage(){
     return (
         <div className="w-full">
             <div className={"flex gap-8 items-center justify-between"}>
-                <h1 className={"uppercase font-bold text-md tracking-[0.2em]"}>about me</h1>
+                <h1 className={"uppercase font-bold text-md tracking-[0.2em]"}>single page</h1>
                 <div className={"bg-ternary h-[2px] w-3/4"}></div>
             </div>
             <div className={"my-12 flex items-center justify-between"}>
