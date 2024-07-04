@@ -1,5 +1,17 @@
+"use client"
+import {useRouter} from "next/navigation";
+
 export default function HomePage() {
+  const router = useRouter();
+  function buttonHandle() {
+      router.push("/about");
+  }
   return (
-      <div>al;ksjdalsd</div>
+      <div className={"flex flex-col justify-center gap-2"}>
+        <h1 className={"font-bold text-primary text-5xl mt-40"}>Alvillage Zuknisianta</h1>
+        <span className={"text-primary text-lg font-bold"}>Web Developers!</span>
+        <span className={"h-[4px] w-36 bg-primary"}></span>
+        <button className={"bg-primary px-4 py-2 w-36 my-2 text-contras hover:bg-secondary"} onClick={buttonHandle}>Get in Touch</button>
+      </div>
   );
 }
