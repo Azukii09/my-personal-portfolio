@@ -5,6 +5,8 @@ import RadialProgressBar from "@/components/component/radialProgressBar";
 import {getLanguageAbout} from "@/data/languageSkill";
 import ProgressBar from "@/components/component/progressBar";
 import {getSkillAbout} from "@/data/skillData";
+import ExperienceSections from "@/components/feature/experience";
+import {getExperienceAbout} from "@/data/experienceData";
 
 export const metadata = {
     title: "About",
@@ -24,6 +26,7 @@ export default function AboutPage(){
     const dataInterest = getInterstAbout()
     const dataLanguage = getLanguageAbout()
     const dataSkill = getSkillAbout()
+
     return (
         <div className="w-full">
             {/*about sections*/}
@@ -31,11 +34,21 @@ export default function AboutPage(){
                 <h1 className={"uppercase font-bold text-lg tracking-[0.2em]"}>about me</h1>
                 <div className={"bg-ternary h-[2px] w-2/3"}></div>
             </div>
+
             {/*profile data*/}
             <div className={"my-12 flex flex-col gap-8 lg:flex-row lg:gap-0 justify-between"}>
                 <div className={"w-full lg:w-5/12 flex flex-col gap-4"}>
-                    <div className={"text-justify indent-5"}>Hi, my name is Alvillage Zuksnisianta! As a freelance and self-employed Full Stack Web Developer since 2016, I design and develop web applications using a variety of technologies including Golang, PostgreSQL, MySQL, Docker, Git, React.js, Vue.js, Laravel, Next.js, Bootstrap, and Tailwind CSS. </div>
-                    <div className={"text-justify indent-5"}>My responsibilities include creating and managing databases, integrating APIs, ensuring application performance and security, debugging and resolving issues, collaborating with cross-functional teams, and maintaining documentation for ongoing development and future updates. I am also experienced in installing websites on both shared hosting and VPS platforms.</div>
+                    <div className={"text-justify indent-5"}>Hi, my name is Alvillage Zuksnisianta! As a freelance and
+                        self-employed Full Stack Web Developer since 2016, I design and develop web applications using a
+                        variety of technologies including Golang, PostgreSQL, MySQL, Docker, Git, React.js, Vue.js,
+                        Laravel, Next.js, Bootstrap, and Tailwind CSS.
+                    </div>
+                    <div className={"text-justify indent-5"}>My responsibilities include creating and managing
+                        databases, integrating APIs, ensuring application performance and security, debugging and
+                        resolving issues, collaborating with cross-functional teams, and maintaining documentation for
+                        ongoing development and future updates. I am also experienced in installing websites on both
+                        shared hosting and VPS platforms.
+                    </div>
                 </div>
                 <div className={"w-full lg:w-5/12 flex flex-col gap-4"}>
                     <div className={"flex"}>
@@ -44,8 +57,10 @@ export default function AboutPage(){
                     </div>
                     <div className={"flex"}>
                         <div className={"w-2/6 font-bold text-lg capitalizex"}>Address</div>
-                        <div className={"italic text-lg"}>: Pelang Village, RT 001 RW 002,<br/> Kembangbahu District, <br/>Lamongan
-                            Regency, <br/>East Java Province,Indonesia</div>
+                        <div className={"italic text-lg"}>: Pelang Village, RT 001 RW 002,<br/> Kembangbahu
+                            District, <br/>Lamongan
+                            Regency, <br/>East Java Province,Indonesia
+                        </div>
                     </div>
                     <div className={"flex"}>
                         <div className={"w-2/6 font-bold text-lg capitalizex"}>Phone</div>
@@ -57,6 +72,7 @@ export default function AboutPage(){
                     </div>
                 </div>
             </div>
+
             {/*services and interest*/}
             <div className={"my-12 flex flex-col gap-8 lg:flex-row lg:gap-0 justify-between"}>
                 <div className={" w-full lg:w-5/12 flex flex-col gap-4"}>
@@ -96,6 +112,7 @@ export default function AboutPage(){
                     </div>
                 </div>
             </div>
+
             {/*skills and language*/}
             <div className={"my-12 flex flex-col gap-8 lg:flex-row lg:gap-0 justify-between"}>
                 <div className={" w-full lg:w-5/12 flex flex-col gap-4"}>
@@ -105,7 +122,7 @@ export default function AboutPage(){
                     </div>
                     <div className={"mt-6 flex flex-col gap-4"}>
                         {dataSkill.map((skill) => (
-                            <ProgressBar percentage={skill.percentage} label={skill.label} key={skill.id} />
+                            <ProgressBar percentage={skill.percentage} label={skill.label} key={skill.id}/>
                         ))}
                     </div>
                 </div>
@@ -116,10 +133,20 @@ export default function AboutPage(){
                     </div>
                     <div className={"mt-6 flex gap-2 flex-wrap"}>
                         {dataLanguage.map((language) => (
-                            <RadialProgressBar percentage={language.percentage} language={language.language} key={language.id}/>
+                            <RadialProgressBar percentage={language.percentage} language={language.language}
+                                               key={language.id}/>
                         ))}
                     </div>
                 </div>
+            </div>
+
+            {/*experience*/}
+            <div className={"flex gap-8 items-center justify-between"}>
+                <h1 className={"uppercase font-bold text-lg tracking-[0.2em]"}>experience</h1>
+                <div className={"bg-ternary h-[2px] w-2/3"}></div>
+            </div>
+            <div className={"my-12"}>
+                <ExperienceSections list={getExperienceAbout()}/>
             </div>
             {/*bottom high set*/}
             <div className={"h-36"}></div>
