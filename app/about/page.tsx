@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {getServicesAbout} from "@/data/serviceAbout";
 import {getInterstAbout} from "@/data/interestAbout";
+import RadialProgressBar from "@/components/component/radialProgressBar";
 
 export const metadata = {
     title: "About",
@@ -52,8 +53,8 @@ export default function AboutPage(){
                 </div>
             </div>
             {/*services and interest*/}
-            <div className={"my-12 flex justify-between"}>
-                <div className={"w-5/12 flex flex-col gap-4"}>
+            <div className={"my-12 flex flex-col gap-8 lg:flex-row lg:gap-0 justify-between"}>
+                <div className={" w-full lg:w-5/12 flex flex-col gap-4"}>
                     <div className={"flex gap-8 items-center justify-between"}>
                         <h1 className={"uppercase font-bold text-lg tracking-[0.2em]"}>services</h1>
                         <div className={"bg-ternary h-[2px] w-3/4"}></div>
@@ -71,7 +72,7 @@ export default function AboutPage(){
                         </ul>
                     </div>
                 </div>
-                <div className={"w-5/12 flex flex-col gap-4"}>
+                <div className={"w-full lg:w-5/12 flex flex-col gap-4"}>
                     <div className={"flex gap-8 items-center justify-between"}>
                         <h1 className={"uppercase font-bold text-lg tracking-[0.2em]"}>interest</h1>
                         <div className={"bg-ternary h-[2px] w-3/4"}></div>
@@ -87,6 +88,38 @@ export default function AboutPage(){
                                 </li>
                             ))}
                         </ul>
+                    </div>
+                </div>
+            </div>
+            {/*skills and language*/}
+            <div className={"my-12 flex flex-col gap-8 lg:flex-row lg:gap-0 justify-between"}>
+                <div className={" w-full lg:w-5/12 flex flex-col gap-4"}>
+                    <div className={"flex gap-8 items-center justify-between"}>
+                        <h1 className={"uppercase font-bold text-lg tracking-[0.2em]"}>skill</h1>
+                        <div className={"bg-ternary h-[2px] w-3/4"}></div>
+                    </div>
+                    <div className={"mt-6"}>
+                        <ul className={"flex gap-4 flex-col"}>
+                            {dataService.map((service) => (
+                                <li className={"flex gap-2 items-center"} key={service.id}>
+                                    <div className={"relative w-3 h-2"}>
+                                        <Image src={"/assets/img/play-new.png"} alt={"play"} fill/>
+                                    </div>
+                                    {service.name}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                <div className={"w-full lg:w-5/12 flex flex-col gap-4"}>
+                    <div className={"flex gap-8 items-center justify-between"}>
+                        <h1 className={"uppercase font-bold text-lg tracking-[0.2em]"}>language</h1>
+                        <div className={"bg-ternary h-[2px] w-3/4"}></div>
+                    </div>
+                    <div className={"mt-6 flex gap-2 flex-wrap"}>
+                        <RadialProgressBar percentage={100} language={"Indonesia"}/>
+                        <RadialProgressBar percentage={80} language={"English"}/>
+                        <RadialProgressBar percentage={60} language={"Javanes"}/>
                     </div>
                 </div>
             </div>
