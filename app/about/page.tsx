@@ -2,6 +2,7 @@ import Image from "next/image";
 import {getServicesAbout} from "@/data/serviceAbout";
 import {getInterstAbout} from "@/data/interestAbout";
 import RadialProgressBar from "@/components/component/radialProgressBar";
+import {getLanguageAbout} from "@/data/languageSkill";
 
 export const metadata = {
     title: "About",
@@ -19,6 +20,7 @@ export const metadata = {
 export default function AboutPage(){
     const dataService = getServicesAbout()
     const dataInterest = getInterstAbout()
+    const dataLanguage = getLanguageAbout()
     return (
         <div className="w-full">
             {/*about sections*/}
@@ -117,9 +119,9 @@ export default function AboutPage(){
                         <div className={"bg-ternary h-[2px] w-3/4"}></div>
                     </div>
                     <div className={"mt-6 flex gap-2 flex-wrap"}>
-                        <RadialProgressBar percentage={100} language={"Indonesia"}/>
-                        <RadialProgressBar percentage={80} language={"English"}/>
-                        <RadialProgressBar percentage={60} language={"Javanes"}/>
+                        {dataLanguage.map((language) => (
+                            <RadialProgressBar percentage={language.percentage} language={language.language} key={language.id}/>
+                        ))}
                     </div>
                 </div>
             </div>

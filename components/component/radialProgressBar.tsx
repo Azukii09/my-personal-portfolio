@@ -9,7 +9,7 @@ export default function RadialProgressBar(props:{
                     {/*Background circle*/}
                     <circle
                         className="circle-progress"
-                        strokeWidth="7"
+                        strokeWidth="5"
                         cx="50"
                         cy="50"
                         r="40"
@@ -17,7 +17,7 @@ export default function RadialProgressBar(props:{
                     {/*Progress circle*/}
                     <circle
                         className="stroke-secondary"
-                        strokeWidth="7"
+                        strokeWidth="5"
                         strokeLinecap="round"
                         cx="50"
                         cy="50"
