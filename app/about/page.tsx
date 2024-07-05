@@ -4,6 +4,7 @@ import {getInterstAbout} from "@/data/interestAbout";
 import RadialProgressBar from "@/components/component/radialProgressBar";
 import {getLanguageAbout} from "@/data/languageSkill";
 import ProgressBar from "@/components/component/progressBar";
+import {getSkillAbout} from "@/data/skillData";
 
 export const metadata = {
     title: "About",
@@ -22,6 +23,7 @@ export default function AboutPage(){
     const dataService = getServicesAbout()
     const dataInterest = getInterstAbout()
     const dataLanguage = getLanguageAbout()
+    const dataSkill = getSkillAbout()
     return (
         <div className="w-full">
             {/*about sections*/}
@@ -101,8 +103,10 @@ export default function AboutPage(){
                         <h1 className={"uppercase font-bold text-lg tracking-[0.2em]"}>skill</h1>
                         <div className={"bg-ternary h-[2px] w-3/4"}></div>
                     </div>
-                    <div className={"mt-6"}>
-                        <ProgressBar percentage={75} label={"HTML"} />
+                    <div className={"mt-6 flex flex-col gap-4"}>
+                        {dataSkill.map((skill) => (
+                            <ProgressBar percentage={skill.percentage} label={skill.label} key={skill.id} />
+                        ))}
                     </div>
                 </div>
                 <div className={"w-full lg:w-5/12 flex flex-col gap-4"}>
