@@ -3,6 +3,7 @@ import {getServicesAbout} from "@/data/serviceAbout";
 import {getInterstAbout} from "@/data/interestAbout";
 import RadialProgressBar from "@/components/component/radialProgressBar";
 import {getLanguageAbout} from "@/data/languageSkill";
+import ProgressBar from "@/components/component/progressBar";
 
 export const metadata = {
     title: "About",
@@ -101,16 +102,7 @@ export default function AboutPage(){
                         <div className={"bg-ternary h-[2px] w-3/4"}></div>
                     </div>
                     <div className={"mt-6"}>
-                        <div className={"flex flex-col"}>
-                            <div className={"flex justify-between w-[80%]"}>
-                                <span className={"font-semibold capitalize"}>judul</span>
-                                <span className={"font-semibold"}>80%</span>
-                            </div>
-                            <div className={"relative h-2 w-full bg-accent rounded-full"}>
-                                <div className="absolute top-0 left-0 h-full bg-secondary w-[80%] rounded-full">
-                                </div>
-                            </div>
-                        </div>
+                        <ProgressBar percentage={75} label={"HTML"} />
                     </div>
                 </div>
                 <div className={"w-full lg:w-5/12 flex flex-col gap-4"}>
