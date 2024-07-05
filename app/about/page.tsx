@@ -101,16 +101,16 @@ export default function AboutPage(){
                         <div className={"bg-ternary h-[2px] w-3/4"}></div>
                     </div>
                     <div className={"mt-6"}>
-                        <ul className={"flex gap-4 flex-col"}>
-                            {dataService.map((service) => (
-                                <li className={"flex gap-2 items-center"} key={service.id}>
-                                    <div className={"relative w-3 h-2"}>
-                                        <Image src={"/assets/img/play-new.png"} alt={"play"} fill/>
-                                    </div>
-                                    {service.name}
-                                </li>
-                            ))}
-                        </ul>
+                        <div className={"flex flex-col"}>
+                            <div className={"flex justify-between w-[80%]"}>
+                                <span className={"font-semibold capitalize"}>judul</span>
+                                <span className={"font-semibold"}>80%</span>
+                            </div>
+                            <div className={"relative h-2 w-full bg-accent rounded-full"}>
+                                <div className="absolute top-0 left-0 h-full bg-secondary w-[80%] rounded-full">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className={"w-full lg:w-5/12 flex flex-col gap-4"}>
