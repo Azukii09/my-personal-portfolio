@@ -4,7 +4,7 @@ import {getLanguageAbout} from "@/data/languageSkill";
 import {getSkillAbout} from "@/data/skillData";
 import ExperienceSections from "@/components/feature/about/experience";
 import {getExperienceAbout} from "@/data/experienceData";
-import BigTitleAbout from "@/components/feature/about/bigTitleAbout";
+import BigTitleAbout from "@/components/component/bigTitleAbout";
 import ProfileAbout from "@/components/feature/about/profileAbout";
 import ServiceAbout from "@/components/feature/about/serviceAbout";
 import InterestAbout from "@/components/feature/about/interestAbout";
