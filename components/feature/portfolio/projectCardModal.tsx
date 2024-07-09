@@ -47,16 +47,29 @@ export default function ProjectCardModal(){
                                     <h1 className="mb-12 text-3xl font-extrabold capitalize">Project Name</h1>
                                     <Image
                                         src="https://images.pexels.com/photos/5839461/pexels-photo-5839461.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                        className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 mb-12"
+                                        className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300"
                                         alt="portfolio"
                                         width={500}
                                         height={500}
                                     />
-                                    <h1 className="mb-4 text-xl font-extrabold capitalize">Description</h1>
-                                    <p className="text-gray-600">Get the most out of Twitter by staying up to
-                                        date
-                                        with
-                                        whats happening.</p>
+                                    <div className={"mt-12"}>
+                                        <h1 className="mb-4 text-xl font-extrabold capitalize">Description</h1>
+                                        <p className="text-gray-600">
+                                            Get the most out of Twitter by staying up to date with whats happening.
+                                        </p>
+                                    </div>
+                                    <div className={"mt-12"}>
+                                        <h1 className="mb-4 text-xl font-extrabold capitalize">Tech Stack</h1>
+                                        <p className="text-gray-600">
+                                            Get the most out of Twitter by staying up to date with whats happening.
+                                        </p>
+                                    </div>
+                                    <div className={"mt-12"}>
+                                        <h1 className="mb-4 text-xl font-extrabold capitalize">Resource</h1>
+                                        <p className="text-gray-600">
+                                            Get the most out of Twitter by staying up to date with whats happening.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
