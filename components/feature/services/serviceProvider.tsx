@@ -1,21 +1,24 @@
 import Image from "next/image";
 
-export default function ServiceProvider(){
+export default function ServiceProvider(props:{
+    title: string;
+    description: string;
+    imgWhite:string;
+    imgBlack:string;
+}){
     return (
         <div className={"w-full md:w-1/2 aspect-square"}>
-            <div className="aspect-square m-3 relative flex flex-col justify-center overflow-hidden bg-gray-50">
-                <div className="absolute inset-0 bg-center"></div>
-                <div className="group relative m-0 flex flex-col gap-2 justify-center items-center aspect-square shadow-xl ring-gray-900/5 border-2 border-ternary">
+            <div className="group aspect-square m-3 flex flex-col items-center justify-center gap-2 overflow-hidden border-2 border-ternary hover:bg-primary hover:border-0">
                     <div className={"flex items-center"}>
-                        <Image src={"/assets/img/socmed/github.png"} alt={""} width={150} height={150}/>
+                        <Image src={props.imgBlack} alt={"icon black"} width={150} height={150} className={"group-hover:hidden"}/>
+                        <Image src={props.imgWhite} alt={"icon white"} width={150} height={150} className={"hidden group-hover:flex"}/>
                     </div>
                     <div className={"flex items-center"}>
-                        <h1 className={"font-semibold text-3xl"}>Title</h1>
+                        <h1 className={"font-semibold text-3xl text-primary group-hover:text-contras"}>{props.title}</h1>
                     </div>
-                    <div className={"w-full px-2 flex text-center text-sm overflow-hidden"}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <div className={"max-h-20 w-full px-2 flex text-center text-sm overflow-y-scroll text-secondary group-hover:text-contras"}>
+                        {props.description}
                     </div>
-                </div>
             </div>
         </div>
     )
