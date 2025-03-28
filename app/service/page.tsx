@@ -21,11 +21,6 @@ export default function ServicePage() {
                     description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur illo quidem repudiandae temporibus vero? Culpa earum harum sit totam! Consequuntur dolorem eligendi eum maiores minima neque nulla quisquam similique sint!"}
                     imgBlack={"/assets/img/socmed/github.png"} imgWhite={"/assets/img/socmed/github-w.png"}
                 />
-                <ServiceProvider
-                    title={"Title"}
-                    description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur illo quidem repudiandae temporibus vero? Culpa earum harum sit totam! Consequuntur dolorem eligendi eum maiores minima neque nulla quisquam similique sint!"}
-                    imgBlack={"/assets/img/socmed/github.png"} imgWhite={"/assets/img/socmed/github-w.png"}
-                />
             </div>
             {/*bottom high set*/}
             <div className={"h-36"}></div>
